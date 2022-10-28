@@ -7,3 +7,4 @@
 ## Run application
 * set encryption key in `docker-compose.yml` to a random 32 char string
 * `docker compose up`
+* set dummy email SMTP server in _Settings > Mail settings_ (Mailhog runs on localhost:1025)
