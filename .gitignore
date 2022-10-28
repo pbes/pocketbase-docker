@@ -1,0 +1,4 @@
+data/*
+public/*
+!data/.empty
+!public/.empty

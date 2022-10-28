@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  pocketbase:
+    image: 'pbes/pocketbase:0.7.9'
+    container_name: pocketbase-server
+    hostname: pocketbase-server
+    ports:
+      - '8090:8090'
+    environment:
+      - PB_ENCRYPTION_KEY=<your encryption key>
+    volumes:
+      - './data:/pocketbase/data'
+      - './public:/pocketbase/public'
+  mailhog:
+    image: 'mailhog/mailhog:latest'
+    container_name: mailhog
+    hostname: mailhog
+    ports:
+      - '1025:1025'
+      - '8025:8025'
+volumes:
+  itware-interview-db-data:
+  minio-data:
